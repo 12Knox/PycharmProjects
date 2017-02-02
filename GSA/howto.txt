@@ -1,0 +1,19 @@
+gcloud auth activate-service-account --key-file=/Users/01014514/PycharmProjects/GSA/airdepot-speech-8736f9582d2d.json
+
+gcloud auth print-access-token
+
+ya29.El-yA9TBia6vsynhKz0walj_Stwx2uBRQF-wFfqee_qv0Qcoa1jwukPFA-r9IuP96gciqmP--70ZlW1k4S4ziFSp6zggTGJJX-GVl-Upd4WNYRpFeNSN6ppSGM61_oQGoA
+
+-H "ya29.El-yA9TBia6vsynhKz0walj_Stwx2uBRQF-wFfqee_qv0Qcoa1jwukPFA-r9IuP96gciqmP--70ZlW1k4S4ziFSp6zggTGJJX-GVl-Upd4WNYRpFeNSN6ppSGM61_oQGoA"
+
+-H "Authorization: Bearer ya29.El-yA9TBia6vsynhKz0walj_Stwx2uBRQF-wFfqee_qv0Qcoa1jwukPFA-r9IuP96gciqmP--70ZlW1k4S4ziFSp6zggTGJJX-GVl-Upd4WNYRpFeNSN6ppSGM61_oQGoA" \
+
+export GOOGLE_APPLICATION_CREDENTIALS="/Users/01014514/PycharmProjects/GSA/airdepot-speech-8736f9582d2d.json"
+
+export GCLOUD_PROJECT=airdepot-speech
+
+export GOOGLE_APPLICATION_CREDENTIALS=airdepot-speech-8736f9582d2d.json
+
+録音から再生分析までのフロー
+rec --encoding signed-integer --bits 16 --channels 1 --rate 16000 161213_05.wav
+sudo python transcribe.py 161213_05.wave
